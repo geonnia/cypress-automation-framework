@@ -11,12 +11,24 @@ describe('Verify autocomplete dropdown list via webdriveruni', () => {
             const productsToSelect = 'Avacado'
             
             if(products == productsToSelect){
-                //cy.log(products)
-                $el.click()
-                
+                //$el.click()
+                cy.trigger(click)
                 cy.get('#submit-button').click()
                 cy.url().should('include', productsToSelect)
             }
+        }).then( () => {
+            cy.get('#myInput').type('G')
+            cy.get('#myInputautocomplete-list > div ').each(($el, index, $list) => {
+                const products = $el.text()
+                const productsToSelect = 'Grapes'
+
+                if(products === productsToSelect){
+                    //$el.click()
+                    $el.trigger(click)
+                    cy.get('#submit-button').click()
+                    cy.url().should('include', productsToSelect)
+                }
+            })
         })
     });
 
