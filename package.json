@@ -7,7 +7,7 @@
     "triggerAllTests-headless": "npx cypress run",
     "triggerAllTests-headed": "npx cypress run --headed",
     "triggerAllTests-chrome": "npx cypress run --browser chrome",
-    "triggerContactUsTest-chrome": "npx cypress run cypress/integration/automation-test-store/contact-us.js --browser chrome"
+    "triggerContactUsTest-chrome": "npx cypress run --spec cypress/integration/automation-test-store/contact-us.js"
   },
   "author": "geonnia",
   "license": "ISC",
