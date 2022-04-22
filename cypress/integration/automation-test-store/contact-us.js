@@ -4,7 +4,7 @@ describe("Test Contact us form via Automation Test Form", () => {
     before(() => {
         cy.fixture('userDetails').as('user')
     });
-    it("Should be able to submit a succesful submission via contact us form", ()=>{
+    it("Should be able to submit a successful submission via contact us form", ()=>{
         cy.visit("https://automationteststore.com/");
         cy.get('a[href$="contact"]').click().then(($a) => {
             cy.log($a.text())
