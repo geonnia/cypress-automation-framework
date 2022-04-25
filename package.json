@@ -8,7 +8,8 @@
     "triggerAllTests-headed": "npx cypress run --headed",
     "triggerAllTests-chrome": "npx cypress run --browser chrome",
     "triggerContactUsTest-chrome": "npx cypress run --spec cypress/integration/automation-test-store/contact-us.js",
-    "triggerAllTest-cypress-dashboard": "npx cypress run --record --key 9734e8ef-acda-4f36-8cb8-4ed3a726f7c8"
+    "triggerAllTest-cypress-dashboard": "npx cypress run --record --key 9734e8ef-acda-4f36-8cb8-4ed3a726f7c8",
+    "triggerAutomationStoreTest-cypress-dashboard": "npx cypress run --spec cypress/integration/automation-test-store --record --key 9734e8ef-acda-4f36-8cb8-4ed3a726f7c8"
   },
   "author": "geonnia",
   "license": "ISC",
